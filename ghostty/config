@@ -1,0 +1,9 @@
+theme = "tokyonight"
+
+font-size = 18 
+font-family = "FiraCode Nerd Font Mono"
+
+window-padding-x = 0
+window-padding-y = 0
+
+adjust-cursor-thickness = 5

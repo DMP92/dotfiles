@@ -1,0 +1,73 @@
+# skhd --start-service
+# do not use brew services start ... as it will not work
+#
+# Focus left, down, up, right
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# # Jump focus between displays
+alt - y : yabai -m display --focus west
+alt - o : yabai -m display --focus east
+#
+
+# rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+
+# flip along y-axis
+shift + alt - y : yabai -m space --mirror y-axis
+
+# flip along x-axis
+shift + alt - x : yabai -m space --mirror x-axis
+
+# toggle window float
+shift + alt - c : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# Modifying Window Size
+
+# maximize a window
+shift + alt - i : yabai -m window --toggle zoom-fullscreen
+
+# balance out tree of windows (resize to occupy same area)
+shift + alt - u : yabai -m space --balance
+
+# swap window
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# move window and split
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - l : yabai -m window --warp east
+
+# move window to display left and right
+shift + alt - s : yabai -m window --display west; yabai -m display --focus west
+shift + alt - d : yabai -m window --display east; yabai -m display --focus east
+
+# move window to prev and next space
+shift + alt - p : yabai -m window --space prev
+shift + alt - n : yabai -m window --space next
+
+# move window to space #
+alt - c : yabai -m space --focus 1
+alt - v : yabai -m space --focus 3
+shift + alt - k : yabai -m window --space 3
+shift + alt - c : yabai -m window --space 4
+shift + alt - v : yabai -m window --space 5
+shift + alt - b : yabai -m window --space 6
+shift + alt - g : yabai -m window --space 7
+
+# --start/stop yabai
+ctrl + alt - q : brew services stop yabai
+ctrl + alt - s : brew services start yabai
+
+# Alt + down -> next tab
+# Alt + Down → Next tab (Cmd + Option + Right Arrow)
+alt - right : osascript -e 'tell application "System Events" to key code 124 using {command down, option down}'
+
+# Alt + Up → Previous tab (Cmd + Option + Left Arrow)
+alt - left : osascript -e 'tell application "System Events" to key code 123 using {command down, option down}'

@@ -1,0 +1,1106 @@
+{
+    "description": "Hyper Key mappings",
+    "manipulators": [
+        {
+            "description": "Caps Lock -> Hyper Key",
+            "from": {
+                "key_code": "caps_lock",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "hyper",
+                        "value": 1
+                    }
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "hyper",
+                        "value": 0
+                    }
+                }
+            ],
+            "to_if_alone": [
+                {
+                    "key_code": "escape"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Toggle Hyper sublayer spacebar",
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "set_variable": {
+                        "name": "hyper_sublayer_spacebar",
+                        "value": 1
+                    }
+                }
+            ],
+            "to_after_key_up": [
+                {
+                    "set_variable": {
+                        "name": "hyper_sublayer_spacebar",
+                        "value": 0
+                    }
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "hyper + spacebar + D -> google drive",
+            "from": {
+                "key_code": "g",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://drive.google.com/drive/u/2/my-drive"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "hyper + spacebar + D -> google drive",
+            "from": {
+                "key_code": "t",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://airtable.com/app4kM2QcBthTwPzQ/tblRPTWNae5QwCOaY/viwrRXNC4njLNn8O1?blocks=hide"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "hyper + spacebar + Q -> google drive",
+            "from": {
+                "key_code": "q",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://accounts.intuit.com/app/sign-in?app_group=QBO&asset_alias=Intuit.accounting.core.qbowebapp&app_environment=prod&intent=qbo&origin-server=ew"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "hyper + spacebar + w -> webflow dashboard",
+            "from": {
+                "key_code": "w",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://webflow.com/dashboard?workspace=spirras-workspace"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "hyper + spacebar + e -> Google",
+            "from": {
+                "key_code": "e",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://www.google.com"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "hyper + spacebar + t -> youtube",
+            "from": {
+                "key_code": "v",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://www.youtube.com"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "hyper + spacebar + f -> Figma.com",
+            "from": {
+                "key_code": "f",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://www.figma.com/files/team/1044739080472642514/recents-and-sharing?fuid=1044739074553567615"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "hyper + spacebar + a -> Ahrefs.com",
+            "from": {
+                "key_code": "a",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://app.ahrefs.com/dashboard"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "hyper + spacebar + u -> Upwork.com",
+            "from": {
+                "key_code": "u",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://www.upwork.com/nx/find-work/best-matches"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "hyper + spacebar + s -> squoosh.com",
+            "from": {
+                "key_code": "s",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://squoosh.app/"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Open Hubspot",
+            "from": {
+                "key_code": "h",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://app.hubspot.com/contacts/23398375/objects/0-3/views/all/board"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Open webflow dashboard",
+            "from": {
+                "key_code": "c",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://chatgpt.com/"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Open webflow dashboard",
+            "from": {
+                "key_code": "l",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://leetcode.com/problemset/"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Zoom",
+            "from": {
+                "key_code": "z",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open https://calendar.google.com/calendar/u/2/r"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open App Store",
+            "from": {
+                "key_code": "n",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'App Store'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Finder",
+            "from": {
+                "key_code": "f",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Finder'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Google Chrome",
+            "from": {
+                "key_code": "i",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Google Chrome'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Notion",
+            "from": {
+                "key_code": "9",
+                "modifiers": {
+                    "optional": [
+                        "shift"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Notion'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Obsidian",
+            "from": {
+                "key_code": "o",
+                "modifiers": {
+                    "optional": [
+                        "shift"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Obsidian'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Calculator",
+            "from": {
+                "key_code": "c",
+                "modifiers": {
+                    "optional": [
+                        "shift"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Calculator'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Clickup",
+            "from": {
+                "key_code": "open_bracket",
+                "modifiers": {
+                    "mandatory": [],
+                    "optional": []
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Notion Calendar'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Clickup",
+            "from": {
+                "key_code": "a",
+                "modifiers": {
+                    "mandatory": [],
+                    "optional": []
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Clickup'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Messages",
+            "from": {
+                "key_code": "m",
+                "modifiers": {
+                    "mandatory": [],
+                    "optional": []
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Messages'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Terminal",
+            "from": {
+                "key_code": "open_bracket",
+                "modifiers": {
+                    "mandatory": [
+                        "shift"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Kitty'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Slack",
+            "from": {
+                "key_code": "slash",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Slack'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open WorkingHours",
+            "from": {
+                "key_code": "5",
+                "modifiers": {
+                    "optional": [
+                        "shift"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Clickup'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Visual Studio Code",
+            "from": {
+                "key_code": "v",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Visual Studio Code'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                }
+            ],
+            "description": "Open Finder",
+            "from": {
+                "key_code": "f",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Finder'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Karabiner-Elements",
+            "from": {
+                "key_code": "g",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Karabiner-Elements'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Open Gmail",
+            "from": {
+                "key_code": "q",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "shell_command": "open -a 'Mail+ for Gmail'"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Switch to next desktop with option + i",
+            "from": {
+                "key_code": "i",
+                "modifiers": {
+                    "mandatory": [
+                        "option"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                        "control"
+                    ]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 0
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Switch to prev desktop with option + u",
+            "from": {
+                "key_code": "u",
+                "modifiers": {
+                    "mandatory": [
+                        "option"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                        "control"
+                    ]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Move Left",
+            "from": {
+                "key_code": "h",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Move Right",
+            "from": {
+                "key_code": "l",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "right_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Move Up",
+            "from": {
+                "key_code": "k",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "up_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Move down",
+            "from": {
+                "key_code": "j",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "down_arrow"
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "name": "hyper",
+                    "type": "variable_if",
+                    "value": 1
+                },
+                {
+                    "name": "hyper_sublayer_spacebar",
+                    "type": "variable_if",
+                    "value": 0
+                }
+            ],
+            "description": "Hyper + x -> Close current window",
+            "from": {
+                "key_code": "x",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "w",
+                    "modifiers": [
+                        "command"
+                    ]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "f16",
+                "modifiers": {
+                    "mandatory": [
+                        "shift"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "3",
+                    "modifiers": [
+                        "shift"
+                    ]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
