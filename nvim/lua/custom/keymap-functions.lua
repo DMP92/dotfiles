@@ -1,0 +1,22 @@
+-- local function get_actual_filepath()
+--   local MiniFiles = require 'mini.files'
+--   local buf_id = vim.api.nvim_get_current_buf()
+--
+--   if MiniFiles.get_fs_entry(buf_id) then
+--     return MiniFiles.get_fs_entry(buf_id).path
+--   else
+--     return vim.fn.expand '%:p'
+--   end
+-- end
+--
+-- local function copy_filepath_to_clipboard()
+--   local path = get_actual_filepath()
+--
+--   -- Optional: Strip the /Users/username part
+--   -- path = path:gsub("^" .. vim.fn.expand("$HOME"), "~")
+--
+--   vim.fn.setreg('+', path)
+--   vim.notify('📋 Path copied: ' .. path)
+-- end
+--
+-- vim.keymap.set('n', '<leader>yf', copy_filepath_to_clipboard, { desc = 'Copy file path to clipboard' })
