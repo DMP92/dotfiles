@@ -199,7 +199,7 @@ return {
             ['zz'] = 'list_scroll_center',
           },
           wo = {
-            conceallevel = 2,
+            conceallevel = 1,
             concealcursor = 'nvc',
           },
         },
@@ -950,7 +950,7 @@ return {
             wrap = false,
             signcolumn = 'yes',
             statuscolumn = ' ',
-            conceallevel = 2,
+            conceallevel = 1,
           },
         }
       end,

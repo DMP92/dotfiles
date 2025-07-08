@@ -473,6 +473,6 @@ return {
 
     obsidian_visual_keymaps(bufnr)
 
-    vim.opt.conceallevel = 2
+    vim.opt.conceallevel = 1
   end,
 }

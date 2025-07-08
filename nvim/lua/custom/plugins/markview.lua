@@ -1,7 +1,7 @@
 -- For `plugins/markview.lua` users.
 return {
   'OXY2DEV/markview.nvim',
-  lazy = false,
+  very_lazy = true,
 
   -- For blink.cmp's completion
   -- source
