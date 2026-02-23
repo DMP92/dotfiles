@@ -4,7 +4,7 @@ return {
   config = function()
     require('mason').setup()
     require('mason-lspconfig').setup {
-      ensure_installed = { 'tsserver', 'html', 'cssls', 'lua_ls', 'jsonls', 'jestls' }, -- your LSPs here
+      ensure_installed = { 'tsserver', 'html', 'cssls', 'lua_ls', 'jsonls', 'jestls', 'python' }, -- your LSPs here
     }
 
     -- vim.lsp.handlers['textDocument/definition'] = vim.lsp.with(vim.lsp.handlers['textDocument/definition'], { split = 'below' })

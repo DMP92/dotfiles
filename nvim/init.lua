@@ -84,6 +84,14 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 --
+
+vim.cmd [[
+  filetype indent off
+  setlocal noautoindent
+  setlocal nosmartindent
+  setlocal nocindent
+  setlocal indentexpr=
+]]
 -- Disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -124,6 +132,13 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.keymap.set('n', '<leader>omv', 'za', { buffer = true, desc = 'Toggle Fold Under Cursor' })
     vim.keymap.set('n', '<leader>omf', 'zc', { buffer = true, desc = 'Close Fold Under Cursor' })
     vim.keymap.set('n', '<leader>om', 'zR', { buffer = true, desc = 'Open All Folds' })
+  end,
+})
+
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.py',
+  callback = function()
+    vim.cmd 'Black'
   end,
 })
 

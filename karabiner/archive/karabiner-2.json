@@ -86,6 +86,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "hyper + spacebar + D -> google drive",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://airtable.com/app4kM2QcBthTwPzQ/tblRPTWNae5QwCOaY/viwrRXNC4njLNn8O1?blocks=hide" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "hyper + spacebar + Q -> google drive",
                                 "from": {
                                     "key_code": "q",
@@ -118,12 +134,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "hyper + spacebar + l -> leetcode",
+                                "description": "hyper + spacebar + e -> Google",
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "e",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open https://leetcode.com/problemset/" }],
+                                "to": [{ "shell_command": "open https://www.google.com" }],
                                 "type": "basic"
                             },
                             {
@@ -134,12 +150,28 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "hyper + spacebar + e -> Google",
+                                "description": "hyper + spacebar + k -> firefox",
                                 "from": {
-                                    "key_code": "e",
+                                    "key_code": "k",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open https://www.google.com" }],
+                                "to": [{ "shell_command": "open -a 'Firefox'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "hyper + spacebar + j -> chrome",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Google Chrome'" }],
                                 "type": "basic"
                             },
                             {
@@ -172,6 +204,22 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open https://www.figma.com/files/team/1044739080472642514/recents-and-sharing?fuid=1044739074553567615" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "hyper + spacebar + [ -> Harvest",
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://spirradigital.harvestapp.com/time" }],
                                 "type": "basic"
                             },
                             {
@@ -257,6 +305,43 @@
                             {
                                 "conditions": [
                                     {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open webflow dashboard",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://leetcode.com/problemset/" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Open Zoom",
+                                "from": {
+                                    "key_code": "z",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://calendar.google.com/calendar/u/2/r" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
                                         "name": "hyper",
                                         "type": "variable_if",
                                         "value": 1
@@ -288,12 +373,12 @@
                                         "value": 0
                                     }
                                 ],
-                                "description": "Open Notion",
+                                "description": "Open Finder",
                                 "from": {
-                                    "key_code": "1",
+                                    "key_code": "f",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Notion'" }],
+                                "to": [{ "shell_command": "open -a 'Finder'" }],
                                 "type": "basic"
                             },
                             {
@@ -309,12 +394,168 @@
                                         "value": 0
                                     }
                                 ],
-                                "description": "Open Notion Calendar",
+                                "description": "Open Ghostty (New Window)",
                                 "from": {
-                                    "key_code": "2",
+                                    "key_code": "v",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Notion Calendar'" }],
+                                "to": [{ "shell_command": "open -na 'Ghostty'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Open Google Chrome",
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Google Chrome'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Open Harvest",
+                                "from": {
+                                    "key_code": "9",
+                                    "modifiers": { "optional": ["shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Harvest'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Open Obsidian",
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "optional": ["shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Obsidian'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Open Calculator",
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": { "optional": ["shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Calculator'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Open Clickup",
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": {
+                                        "mandatory": [],
+                                        "optional": []
+                                    }
+                                },
+                                "to": [{ "shell_command": "open https://calendar.google.com/calendar/u/2/r" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Open Clickup",
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "mandatory": [],
+                                        "optional": []
+                                    }
+                                },
+                                "to": [{ "shell_command": "open -a 'Clickup'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Open Messages",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": {
+                                        "mandatory": [],
+                                        "optional": []
+                                    }
+                                },
+                                "to": [{ "shell_command": "open -a 'Messages'" }],
                                 "type": "basic"
                             },
                             {
@@ -332,10 +573,13 @@
                                 ],
                                 "description": "Open Terminal",
                                 "from": {
-                                    "key_code": "3",
-                                    "modifiers": { "optional": ["any"] }
+                                    "key_code": "open_bracket",
+                                    "modifiers": {
+                                        "mandatory": ["shift"],
+                                        "optional": []
+                                    }
                                 },
-                                "to": [{ "shell_command": "open -a 'Terminal'" }],
+                                "to": [{ "shell_command": "open -a 'Ghostty'" }],
                                 "type": "basic"
                             },
                             {
@@ -353,7 +597,7 @@
                                 ],
                                 "description": "Open Slack",
                                 "from": {
-                                    "key_code": "4",
+                                    "key_code": "slash",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Slack'" }],
@@ -375,30 +619,9 @@
                                 "description": "Open WorkingHours",
                                 "from": {
                                     "key_code": "5",
-                                    "modifiers": { "optional": ["any"] }
+                                    "modifiers": { "optional": ["shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'WorkingHours'" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "hyper_sublayer_spacebar",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    }
-                                ],
-                                "description": "Open Visual Studio Code",
-                                "from": {
-                                    "key_code": "v",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open -a 'Visual Studio Code'" }],
+                                "to": [{ "shell_command": "open -a 'Clickup'" }],
                                 "type": "basic"
                             },
                             {
@@ -456,12 +679,12 @@
                                         "value": 0
                                     }
                                 ],
-                                "description": "Open Calculator",
+                                "description": "Open Trello",
                                 "from": {
-                                    "key_code": "c",
+                                    "key_code": "t",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Calculator'" }],
+                                "to": [{ "shell_command": "open -a 'Trello'" }],
                                 "type": "basic"
                             },
                             {
@@ -490,7 +713,7 @@
                                     {
                                         "name": "hyper",
                                         "type": "variable_if",
-                                        "value": 1
+                                        "value": 0
                                     },
                                     {
                                         "name": "hyper_sublayer_spacebar",
@@ -498,10 +721,10 @@
                                         "value": 0
                                     }
                                 ],
-                                "description": "Switch to next desktop with Hyper + D",
+                                "description": "Switch to next desktop with option + i",
                                 "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "optional": ["any"] }
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": ["option"] }
                                 },
                                 "to": [
                                     {
@@ -516,7 +739,7 @@
                                     {
                                         "name": "hyper",
                                         "type": "variable_if",
-                                        "value": 1
+                                        "value": 0
                                     },
                                     {
                                         "name": "hyper_sublayer_spacebar",
@@ -524,10 +747,10 @@
                                         "value": 0
                                     }
                                 ],
-                                "description": "Switch to prev desktop with Hyper + A",
+                                "description": "Switch to prev desktop with option + u",
                                 "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "optional": ["any"] }
+                                    "key_code": "u",
+                                    "modifiers": { "mandatory": ["option"] }
                                 },
                                 "to": [
                                     {
@@ -646,12 +869,25 @@
                                     }
                                 ],
                                 "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f16",
+                                    "modifiers": { "mandatory": ["shift"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "3",
+                                        "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
                             }
                         ]
                     }
                 ]
             },
-            "name": "Default profile",
+            "name": "Devin",
             "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }

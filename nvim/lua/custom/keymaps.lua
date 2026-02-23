@@ -214,6 +214,11 @@ return {
     files.open('.', false)
   end, { desc = 'Security Folder' }),
 
+  vim.keymap.set('n', '<leader>dz', function()
+    vim.cmd 'cd ~/Documents/education/resources/obsidian-vault-container/SD/work/projects/prospects/'
+    files.open('~/Documents/education/resources/obsidian-vault-container/SD/work/projects/prospects/', false)
+  end, { desc = 'Upwork Proposals' }),
+
   -- NOTE: Snacks
 
   -- Open Snacks Dashboard

@@ -39,11 +39,34 @@ return {
       -- Show message with spinning animation when a git command is running.
       process_spinner = false,
       -- Used to generate URL's for branch popup action "pull request".
+      -- git_services = {
+      --   ['github.com'] = 'https://github.com/${owner}/${repository}/compare/${branch_name}?expand=1',
+      --   ['bitbucket.org'] = 'https://bitbucket.org/${owner}/${repository}/pull-requests/new?source=${branch_name}&t=1',
+      --   ['gitlab.com'] = 'https://gitlab.com/${owner}/${repository}/merge_requests/new?merge_request[source_branch]=${branch_name}',
+      --   ['azure.com'] = 'https://dev.azure.com/${owner}/_git/${repository}/pullrequestcreate?sourceRef=${branch_name}&targetRef=${target}',
+      -- },
+
       git_services = {
-        ['github.com'] = 'https://github.com/${owner}/${repository}/compare/${branch_name}?expand=1',
-        ['bitbucket.org'] = 'https://bitbucket.org/${owner}/${repository}/pull-requests/new?source=${branch_name}&t=1',
-        ['gitlab.com'] = 'https://gitlab.com/${owner}/${repository}/merge_requests/new?merge_request[source_branch]=${branch_name}',
-        ['azure.com'] = 'https://dev.azure.com/${owner}/_git/${repository}/pullrequestcreate?sourceRef=${branch_name}&targetRef=${target}',
+        ['github.com'] = {
+          commit = 'https://github.com/%s/%s/commit/%s',
+          pull_request = 'https://github.com/%s/%s/compare/%s?expand=1',
+          tree = 'https://github.com/%s/%s/tree/%s',
+        },
+        ['gitlab.com'] = {
+          commit = 'https://gitlab.com/%s/%s/-/commit/%s',
+          pull_request = 'https://gitlab.com/%s/%s/-/merge_requests/new?merge_request[source_branch]=%s',
+          tree = 'https://gitlab.com/%s/%s/-/tree/%s',
+        },
+        ['bitbucket.org'] = {
+          commit = 'https://bitbucket.org/%s/%s/commits/%s',
+          pull_request = 'https://bitbucket.org/%s/%s/pull-requests/new?source=%s&t=1',
+          tree = 'https://bitbucket.org/%s/%s/src/%s',
+        },
+        ['dev.azure.com'] = {
+          commit = 'https://dev.azure.com/%s/%s/_git/%s/commit/%s',
+          pull_request = 'https://dev.azure.com/%s/%s/_git/%s/pullrequestcreate?sourceRef=%s',
+          tree = 'https://dev.azure.com/%s/%s/_git/%s?version=GB%s',
+        },
       },
       -- Allows a different telescope sorter. Defaults to 'fuzzy_with_index_bias'. The example below will use the native fzf
       -- sorter instead. By default, this function returns `nil`.

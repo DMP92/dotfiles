@@ -325,7 +325,8 @@ return {
       },
     },
     image = {
-      enabled = true,
+      enabled = false,
+      filetypes = { 'markdown' },
       doc = {
         -- Personally I set this to false, I don't want to render all the
         -- images in the file, only when I hover over them

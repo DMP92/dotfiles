@@ -16,6 +16,15 @@ return {
     'saghen/blink.cmp',
   },
   config = function()
+    -- local lspconfig = require 'lspconfig'
+    vim.lsp.config('emmet_language_server', {
+      filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'python' },
+    })
+    -- Your existing LSP setup goes here...
+    -- Add emmet LSP
+    -- lspconfig.emmet_language_server.setup {
+    --   filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'python' },
+    -- }
     -- Brief aside: **What is LSP?**
     --
     -- LSP is an initialism you've probably heard, but might not understand what it is.
@@ -252,7 +261,8 @@ return {
           -- by the server configuration above. Useful when disabling
           -- certain features of an LSP (for example, turning off formatting for ts_ls)
           server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-          require('lspconfig')[server_name].setup(server)
+          -- require('lspconfig')[server_name].setup(server)
+          vim.lsp.config(server_name, server)
         end,
       },
     }

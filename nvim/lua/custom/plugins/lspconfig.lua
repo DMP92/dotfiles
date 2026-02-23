@@ -17,6 +17,7 @@ return {
     lspconfig.cssls.setup {}
     -- lspconfig.htmlx.setup {}
     --
+    lspconfig.emmet_ls.setup {}
 
     lspconfig.jsonls.setup {
       settings = {

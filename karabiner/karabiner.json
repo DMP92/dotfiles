@@ -86,12 +86,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "hyper + spacebar + D -> google drive",
+                                "description": "hyper + spacebar + D -> trello.com",
                                 "from": {
                                     "key_code": "t",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open https://airtable.com/app4kM2QcBthTwPzQ/tblRPTWNae5QwCOaY/viwrRXNC4njLNn8O1?blocks=hide" }],
+                                "to": [{ "shell_command": "open https://trello.com/b/3OXajGSb/spirra-digital" }],
                                 "type": "basic"
                             },
                             {
@@ -140,6 +140,22 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open https://www.google.com" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "hyper + spacebar + r -> Upwork",
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://www.upwork.com" }],
                                 "type": "basic"
                             },
                             {
@@ -214,6 +230,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "hyper + spacebar + [ -> Harvest",
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://spirradigital.harvestapp.com/time" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "hyper + spacebar + a -> Ahrefs.com",
                                 "from": {
                                     "key_code": "a",
@@ -230,12 +262,28 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "hyper + spacebar + u -> Upwork.com",
+                                "description": "hyper + spacebar + a -> Ahrefs.com",
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "a",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open https://www.upwork.com/nx/find-work/best-matches" }],
+                                "to": [{ "shell_command": "open https://app.ahrefs.com/dashboard" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "hyper + r -> Raycast",
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a Raycast" }],
                                 "type": "basic"
                             },
                             {
@@ -420,12 +468,12 @@
                                         "value": 0
                                     }
                                 ],
-                                "description": "Open Notion",
+                                "description": "Open Harvest",
                                 "from": {
                                     "key_code": "9",
                                     "modifiers": { "optional": ["shift"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Notion'" }],
+                                "to": [{ "shell_command": "open -a 'Harvest'" }],
                                 "type": "basic"
                             },
                             {
@@ -483,6 +531,27 @@
                                         "value": 0
                                     }
                                 ],
+                                "description": "Open Screaming Frog",
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": { "optional": ["shift"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Screaming Frog SEO Spider'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
                                 "description": "Open Clickup",
                                 "from": {
                                     "key_code": "open_bracket",
@@ -491,7 +560,7 @@
                                         "optional": []
                                     }
                                 },
-                                "to": [{ "shell_command": "open -a 'Notion Calendar'" }],
+                                "to": [{ "shell_command": "open https://calendar.google.com/calendar/u/2/r" }],
                                 "type": "basic"
                             },
                             {
@@ -648,6 +717,43 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -a 'Karabiner-Elements'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    },
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 0
+                                    }
+                                ],
+                                "description": "Open Trello",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Trello'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_spacebar",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "hyper + spacebar + T -> Trello.com",
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open https://trello.com/b/3OXajGSb/spirra-digital" }],
                                 "type": "basic"
                             },
                             {
@@ -850,7 +956,7 @@
                     }
                 ]
             },
-            "name": "Devin",
+            "name": "Default profile",
             "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
